@@ -119,30 +119,30 @@ useEffect(() => {
           )}
         </div>
       </div>
-      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-        <div className="h-96 overflow-auto">
-          <table className="w-full text-sm table-fixed">
+      <div className="bg-white border border-gray-200 rounded-lg">
+        <div className="max-h-96 overflow-auto overflow-x-auto px-4 sm:px-0">
+          <table className="w-full text-sm table-auto min-w-0">
             <thead className="bg-gray-50 border-b border-gray-200 sticky top-0 z-10">
               <tr>
-                <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                <th className="sm:px-6 px-3 sm:py-3 py-2 text-left font-semibold text-gray-700 whitespace-normal">
                   Teacher Name
                 </th>
-                <th className="px-6 py-3 text-left font-semibold text-gray-700">
+                <th className="sm:px-6 px-3 sm:py-3 py-2 text-left font-semibold text-gray-700 whitespace-normal">
                   Subject
                 </th>
-                <th className="px-6 py-3 text-center font-semibold text-gray-700">
+                <th className="sm:px-6 px-3 sm:py-3 py-2 text-center font-semibold text-gray-700 whitespace-normal">
                   Lessons
                 </th>
-                <th className="px-6 py-3 text-center font-semibold text-gray-700">
+                <th className="sm:px-6 px-3 sm:py-3 py-2 text-center font-semibold text-gray-700 whitespace-normal">
                   Quizzes
                 </th>
-                <th className="px-6 py-3 text-center font-semibold text-gray-700">
+                <th className="sm:px-6 px-3 sm:py-3 py-2 text-center font-semibold text-gray-700 whitespace-normal">
                   Papers
                 </th>
-                <th className="px-6 py-3 text-center font-semibold text-gray-700">
+                <th className="sm:px-6 px-3 sm:py-3 py-2 text-center font-semibold text-gray-700 whitespace-normal">
                   Total
                 </th>
-                <th className="px-6 py-3 text-center font-semibold text-gray-700">
+                <th className="sm:px-6 px-3 sm:py-3 py-2 text-center font-semibold text-gray-700 whitespace-normal">
                   Action
                 </th>
               </tr>
@@ -153,29 +153,29 @@ useEffect(() => {
                   key={teacher.teacher_id}
                   className="hover:bg-gray-50 transition-colors"
                 >
-                  <td className="px-6 py-4 text-gray-900 font-medium">
+                  <td className="sm:px-6 px-3 sm:py-4 py-2 text-gray-900 font-medium whitespace-normal break-words">
                     {teacher.teacher_name}
                   </td>
-                  <td className="px-6 py-4 text-gray-600">
+                  <td className="sm:px-6 px-3 sm:py-4 py-2 text-gray-600 whitespace-normal break-words">
                     {teacher.subjects && teacher.subjects.length > 1
                       ? `${teacher.subjects[0]} (+${teacher.subjects.length - 1})`
                       : teacher.subject}
                   </td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-medium">
+                  <td className="sm:px-6 px-3 sm:py-4 py-2 text-center text-gray-900 font-medium whitespace-normal">
                     {teacher.lessonPlans}
                   </td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-medium">
+                  <td className="sm:px-6 px-3 sm:py-4 py-2 text-center text-gray-900 font-medium whitespace-normal">
                     {teacher.quizzes}
                   </td>
-                  <td className="px-6 py-4 text-center text-gray-900 font-medium">
+                  <td className="sm:px-6 px-3 sm:py-4 py-2 text-center text-gray-900 font-medium whitespace-normal">
                     {teacher.questionPapers}
                   </td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="sm:px-6 px-3 sm:py-4 py-2 text-center whitespace-normal">
                     <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold">
                       {teacher.total}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="sm:px-6 px-3 sm:py-4 py-2 text-center whitespace-normal">
                     <button
                       onClick={() =>
                         setSelectedTeacherId(
