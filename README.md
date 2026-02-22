@@ -1,3 +1,7 @@
+# Live Demo — Teacher Insights Dashboard
+
+[https://teacher-insights-dashboard-six.vercel.app/](https://teacher-insights-dashboard-six.vercel.app/)
+
 # Teacher Insights Dashboard
 
 A production-grade analytics platform for school administrators to monitor teacher performance and activity metrics. Built with Next.js, TypeScript, and MongoDB.
